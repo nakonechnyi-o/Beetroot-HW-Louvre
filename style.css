@@ -1,0 +1,55 @@
+body {
+    background-color: white;
+    margin: 20px;
+}
+
+h2 {
+    text-transform: uppercase;
+    padding: 50px 30px 5px 20px;
+    font-family: Arial Narrow, serif;
+    font-size: 28px;
+  }
+
+h2 span {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #7f9491;
+}
+
+  p {
+    padding: 20px;
+    font-family: Georgia, serif;
+}
+
+.container {
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    perspective: 1000px; 
+  }
+  
+  .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    transition: transform 0.9s;
+    transform-style: preserve-3d;
+    box-shadow: 0 2px 4px rgba(0,0,0,.3);
+  }
+  
+  .container:hover .inner {
+    transform: rotateY(180deg);
+  }
+
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    background-color: #C4DCD9;
+    transform: rotateY(180deg);
+  }
